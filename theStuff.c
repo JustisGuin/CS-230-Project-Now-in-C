@@ -29,8 +29,14 @@ int main(){
                 binaryValue = hexDigit - 'A' + 10;
             }
 
-    
+            // 4 bit equiv
+            printf("Translated  Hex Digit: ,%d%d%d%d\n",
+                (binaryValue & 0x8) >> 3,
+                (binaryValue & 0x4) >> 2,
+                (binaryValue & 0x2) >> 1,
+                (binaryValue & 0x1)
+                );
+        }
     }
 
     return 0;
-}
